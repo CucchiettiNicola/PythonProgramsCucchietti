@@ -4,7 +4,7 @@ import random as r
 spostamento = 1
 moltiplicatore = 10
 
-t.speed(0)
+t.speed(1)
 
 while True:
     if((r.random()*10)<5):
