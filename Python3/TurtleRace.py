@@ -13,16 +13,45 @@ for i in range(0, n_turtles-1):
     l[i].penup()
     l[i].setx(0-(grande/2))
     l[i].sety(cont + divisioniCampo)
-    l[i].color("red")
+    ran = r.randrange(0,7)
+    if ran == 0:
+        l[i].color("red")
+    if ran == 1:
+        l[i].color("yellow")
+    if ran == 2:
+        l[i].color("blue")
+    if ran == 3:
+        l[i].color("orange")
+    if ran == 4:
+        l[i].color("purple")
+    if ran == 5:
+        l[i].color("green")
+    if ran == 6:
+        l[i].color("black")
     cont = cont + divisioniCampo
 l.append(t)
 t.penup()
+ran = r.randrange(0,7)
+if ran == 0:
+    t.color("red")
+if ran == 1:
+    t.color("yellow")
+if ran == 2:
+    t.color("blue")
+if ran == 3:
+    t.color("orange")
+if ran == 4:
+    t.color("purple")
+if ran == 5:
+    t.color("green")
+if ran == 6:
+    t.color("black")
 t.setx(0-(grande/2))
 t.sety(cont+divisioniCampo)
 cont = cont + divisioniCampo
 while uscita:
     for i in range(0, n_turtles):
-        l[i].forward(r.randrange(0,11))
+        l[i].forward(r.randrange(0,16))
         if l[i].xcor() > (grande/2):
             uscita = False
             print("turtle ")
