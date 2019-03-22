@@ -6,53 +6,55 @@ t.setup(grande, grande)
 divisioniCampo = grande/(n_turtles+1)
 l = []
 cont = (0-(grande/2))
-uscita = True
 t.speed(1)
 for i in range(0, n_turtles-1):
-    l.append(t.Turtle())
-    l[i].penup()
-    l[i].setx(0-(grande/2))
-    l[i].sety(cont + divisioniCampo)
+    tartaruga = t.Turtle()
+    tartaruga.penup()
+    tartaruga.setx(0-(grande/2))
+    tartaruga.sety(cont + divisioniCampo)
+    
     ran = r.randrange(0,7)
     if ran == 0:
-        l[i].color("red")
-    if ran == 1:
-        l[i].color("yellow")
-    if ran == 2:
-        l[i].color("blue")
-    if ran == 3:
-        l[i].color("orange")
-    if ran == 4:
-        l[i].color("purple")
-    if ran == 5:
-        l[i].color("green")
-    if ran == 6:
-        l[i].color("black")
+        tartaruga.color("red")
+    elif ran == 1:
+        tartaruga.color("yellow")
+    elif ran == 2:
+        tartaruga.color("blue")
+    elif ran == 3:
+        tartaruga.color("orange")
+    elif ran == 4:
+        tartaruga.color("purple")
+    elif ran == 5:
+        tartaruga.color("green")
+    elif ran == 6:
+        tartaruga.color("black")
     cont = cont + divisioniCampo
-l.append(t)
+    l.append(tartaruga)
 t.penup()
 ran = r.randrange(0,7)
 if ran == 0:
     t.color("red")
-if ran == 1:
+elif ran == 1:
     t.color("yellow")
-if ran == 2:
+elif ran == 2:
     t.color("blue")
-if ran == 3:
+elif ran == 3:
     t.color("orange")
-if ran == 4:
+elif ran == 4:
     t.color("purple")
-if ran == 5:
+elif ran == 5:
     t.color("green")
-if ran == 6:
+elif ran == 6:
     t.color("black")
 t.setx(0-(grande/2))
 t.sety(cont+divisioniCampo)
 cont = cont + divisioniCampo
+l.append(t)
+uscita = True
 while uscita:
-    for i in range(0, n_turtles):
-        l[i].forward(r.randrange(0,16))
-        if l[i].xcor() > (grande/2):
+    for tartaruga in l:
+        tartaruga.forward(r.randrange(0,16))
+        if tartaruga.xcor() > (grande/2):
             uscita = False
             print("turtle ")
             print(i+1)
