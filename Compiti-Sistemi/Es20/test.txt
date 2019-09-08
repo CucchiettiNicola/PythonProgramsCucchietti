@@ -1,0 +1,6 @@
+This is the line 1.
+This is the line 2.
+This is the line 3.
+This is a text file.
+It is been created to test a pyhon exercise.
+The exercise is number 20.
